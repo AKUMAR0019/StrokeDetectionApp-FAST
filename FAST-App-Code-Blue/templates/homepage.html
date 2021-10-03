@@ -1,0 +1,116 @@
+{% extends "index.html" %}
+
+{% block head %}
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="description" content="">
+	<meta name="author" content="">
+
+	<title>Cover Template for Bootstrap</title>
+
+	<!-- Custom styles for this template -->
+	<link href="cover.css" rel="stylesheet">
+
+{% endblock %}
+
+
+{% block content %}
+
+<div class="transparentbox">
+	<br>
+	<br>
+	<div class="cover-container d-flex h-100 p-3 mx-auto flex-column">
+		<main role="main" class="inner cover">
+		<h1 class="cover-heading">Welcome to F.A.S.T.</h1>
+		<br>
+		<p class="lead">Facial Asymmetry / Stroke Test</p>
+		<p><img src="https://i.ibb.co/71cSJw4/4becf74a42d04d5683d6556111284151.png" alt="FAST-Logo" width="180"></p>
+		<br>
+		<p class="lead">
+			<a href="#cam" class="small-btn">Get Started</a>
+		</p>
+		</main>
+	</div>
+	<br>
+	<br>
+</div>
+
+<br>
+<br>
+
+<div class="row">
+	<div class="col-md-6">
+		<div class="jumbotron">
+			<h1 class="display-5">Acting Fast</h1>
+			<p class="lead">Strokes can be unexpected and very dangerous, which is why it is important to take immediate action when stroke symptoms are identified. This is where FAST can help. By scanning facial images, FAST detects potentially dangerous facial asymmetry and notifies an emergency contact.</p>
+			<hr class="my-4">
+				<p><h4>Every 40 seconds, someone has a stroke</h4></p>
+				<p><h4>Someone dies of a stroke every 4 minutes</h4></p>
+				<p><h4>87% of strokes are ischemic</h4></p>
+				<p><h4>Strokes can occur at any age</h4></p>
+
+			<p class="lead">
+			  <a class="small-btn" href="/resources" role="button">Learn more</a>
+			</p>
+		  </div>
+	  </div>
+
+	  <div class="col-md-6">
+		<div class="card">
+			<img src="https://miro.medium.com/max/3000/1*m2gDBT_nc-iE7R4AM3sHBQ.jpeg" class="card-img-top" alt="...">
+			<div class="card-body">
+				<h5 class="card-title">About FAST</h5>
+				<p class="card-text">FAST is a web application for stroke detection developed by Code Blue. FAST utilizes artificial intelligence to recognize facial paralysis. Users can acess FAST on any device with an internet connection.</p>
+			</div>
+		  
+		  
+		</div>
+	  </div>
+</div>
+<br>
+<a id="cam"></a>
+<!-- Camera section -->
+<div class="transparentbox">
+	<br>
+	<div class="section center" id="demo">
+		<h1 class="cover-heading">Try it out!</h1><br>
+		<p class="lead">Position your face in the frame of the camera and click the Detect Asymmetry button below.</p>
+			<img class="center" style="object-fit: contain;" src="{{ url_for('video_feed') }}">
+			<br><br>
+			<!-- <a class="waves-effect waves-light btn-large" id="generate" href="/predict">Detect Asymmetry</a> -->
+			<a class="small-btn" href="/predict" role="button">Detect Asymmetry</a>
+			<br><br>
+
+	</div>
+
+	<!-- <h2>Select a file to upload</h2>
+	<p>
+		{% with messages = get_flashed_messages() %}
+		{% if messages %}
+			<ul>
+			{% for message in messages %}
+			<li>{{ message }}</li>
+			{% endfor %}
+			</ul>
+		{% endif %}
+		{% endwith %}
+	</p>
+	{% if filename %}
+		<div>
+			<img src="{{ url_for('display_image', filename=filename) }}">
+		</div>
+	{% endif %}
+	<form method="post" action="/" enctype="multipart/form-data">
+		<dl>
+			<p>
+				<input type="file" name="file" autocomplete="off" required>
+			</p>
+		</dl>
+		<p>
+			<input type="submit" value="Submit">
+		</p>
+	</form> -->
+</div>
+
+{% endblock %}
+

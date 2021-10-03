@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+
+<html>
+  <head></head>
+<body>
+{% block content %}
+<div class="row">
+  <div class="alert alert-danger" role="alert">
+      <center><p><h1> FAST has detected potentially dangerous facial asymmetry, please take immediate action.</h1></p></center>
+  </div>
+</div>
+
+<br>
+    
+</div>
+    <form action="/buttons" method = 'POST'>
+            <center><input type ="submit" value = "CALL & TEXT EMERGENCY CONTACT" id = "send_btn" class="btn btn-large btn-block btn-danger"/></center>
+    </form>
+{% endblock %}
+</body>
+</html>
